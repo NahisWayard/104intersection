@@ -19,7 +19,7 @@ OBJ		=	$(SRC:%.c=%.o)
 
 LIB_DIR		=	$(realpath ./lib)
 
-LDFLAGS		=	-L $(LIB_DIR) -Llib -lmy -lncurses
+LDFLAGS		=	-L $(LIB_DIR) -Llib -lmy -lm
 
 CC		=	gcc
 
