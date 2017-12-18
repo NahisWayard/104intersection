@@ -1,0 +1,5 @@
+.vscode
+libmy.a
+*.o
+vgc*
+104intersection
