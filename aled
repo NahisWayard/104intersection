@@ -1,0 +1,48 @@
+Maths:
+
+******************************************************************
+Cylindre :
+x² + y² = R²
+
+a : ux² + uy²
+b : ux * x0 + uy * y0
+c : x0² + y0²
+
+--> (ux)		(x0)
+ u  (uy)    P0	(y0)
+    (uz)		(z0)
+	
+Delta > 0 ? 2 solutions
+Delta = 0 ? 1 solution -b/2a
+Delta < 0 ? (P0 appartient au cylindre) ? S = R : S = 0
+
+*****************************************************************
+Sphère :
+x² + y² + z² - R² = 0
+
+a : ux² + uy² + uz²
+b : ux * x0 + uy * y0 + uz *z0
+c : x0² + y0² + z0²
+
+at² + bt + c = 0
+
+    (ux * t + x0)
+Pt  (uy * t + y0)
+    (uz * t + z0)
+
+--> (ux)		(x0)
+ u  (uy)	P0	(y0)
+    (uz)		(z0)
+
+Delta > 0 ? 2 solutions
+Delta = 0 ? 1 solution -b/2a
+Delta < 0 ? S = 0
+
+*****************************************************************
+Cone : (PHI ANGLE)
+cos phi = z/sqrt(x² + y² + z²)
+
+(x² + y² + z²) * cos²(phi) - z² = 0
+cos²(phi) * x² + cos²(phi) * y² + (cos²(phi) - 1) * z²
+
+*****************************************************************
