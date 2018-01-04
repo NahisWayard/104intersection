@@ -25,29 +25,17 @@ void delta(float delta)
 
 void sphere(char **av)
 {
-	int a = VX * VX + VY * VY + VZ * VZ;
-	int b = (2 * PX * VX) + (2 * PY * VY) + (2 * PZ * VZ);
-	int c = PX * PX + PY * PY + PZ * PZ - RAD * RAD;
-
-	delta((b * b) - (4 * a * c));
+	;
 }
 
 void cylinder(char **av)
 {
-	int a = VX * VX + VY * VY;
-	int b = (2 * PX * VX) + (2 * PY * VY);
-	int c = PX * PX + PY * PY - RAD * RAD;
-
-	delta((b * b) - (4 * a * c));
+	;
 }
 
 void cone(char **av)
 {
-	int a = VX * VX + VY * VY - ((VZ * VZ) / (tan(RAD) * tan(RAD)));
-	int b = (2 * PX * VX) + (2 * PY * VY)  - ((2 * PZ * VZ) / (tan(RAD) * tan(RAD)));
-	int c = PX * PX + PY * PY - ((PZ * PZ) / (tan(RAD) * tan(RAD)));
-
-	delta((b * b) - (4 * a * c));
+	;
 }
 
 int main(int ac, char **av)
@@ -60,6 +48,6 @@ int main(int ac, char **av)
 		atoi(av[8]));
 	printf("straight line going through the (%i,%i,%i) point and of direction vector (%i,%i,%i)\n", atoi(
 		       av[2]), atoi(av[3]), atoi(av[4]), atoi(av[5]), atoi(av[6]), atoi(av[7]));
-	(av[1][0] == 49) ? sphere(av) : (av[1][0] == 50) ? cylinder(av) : cone(av);
+	(av[1][0] == 49) ? delta(pow((int) ((2 * PX * VX) + (2 * PY * VY) + (2 * PZ * VZ)), 2) - (4 * (int) (VX * VX + VY * VY + VZ * VZ) * (int) (PX * PX + PY * PY + PZ * PZ - RAD * RAD))) : (av[1][0] == 50) ? delta(pow((int) ((2 * PX * VX) + (2 * PY * VY)), 2) - (4 * (int) (VX * VX + VY * VY) * (int) (PX * PX + PY * PY - RAD * RAD))) : delta(pow((int) ((2 * PX * VX) + (2 * PY * VY)  - ((2 * PZ * VZ) / (tan(RAD) * tan(RAD)))), 2) - (4 * (int) (VX * VX + VY * VY - ((VZ * VZ) / (tan(RAD) * tan(RAD)))) * (int) (PX * PX + PY * PY - ((PZ * PZ) / (tan(RAD) * tan(RAD))))));
 	return (0);
 }
