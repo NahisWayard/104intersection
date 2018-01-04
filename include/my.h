@@ -8,6 +8,7 @@
 #ifndef __MY__H_
 #define	__MY__H_
 
+int is_nbr(char *);
 int my_put_nbr(int);
 int my_putchar(char);
 int my_putstr(char *);

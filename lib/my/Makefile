@@ -25,7 +25,8 @@ SRCS =	my_putchar.c \
 	my_getnbr.c	\
 	indexof.c	\
 	my_strdup.c	\
-	get_digits.c
+	get_digits.c	\
+	is_nbr.c
 
 OBJS = $(SRCS:.c=.o)
 

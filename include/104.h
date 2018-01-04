@@ -10,6 +10,6 @@
 #define VZ atof(argv[7])
 
 #define RAD atof(argv[8])
-#define ANGLE (tan((atof(av[8]) * M_PI) / 180)) * (tan((atof(av[8]) * M_PI) / 180))
+#define ANGLE (tan(((90 - atof(argv[8])) * M_PI) / 180)) * (tan(((90 - atof(argv[8])) * M_PI) / 180))
 
 #endif
